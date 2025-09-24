@@ -1,0 +1,230 @@
+/* ===== VARIABLES ===== */
+:root {
+  --primary-color: #4a6fc7;
+  --primary-dark: #3b5aa6;
+  --secondary-color: #2c3e50;
+  --text-dark: #333;
+  --text-light: #6c757d;
+  --white: #ffffff;
+  --bg-light: #f4f6f9;
+  --border-color: #ddd;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --border-radius-sm: 8px;
+  --border-radius-md: 10px;
+
+  --shadow-light: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* ===== LAYOUT ===== */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 220px;
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: var(--spacing-lg);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-xl);
+  color: #ecf0f1;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin: var(--spacing-md) 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #bdc3c7;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: block;
+  border-radius: var(--border-radius-sm);
+  transition: background 0.3s, color 0.3s, padding-left 0.3s;
+  position: relative;
+}
+
+/* Hover & Active styles */
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background: #34495e;
+  color: var(--white);
+  padding-left: calc(var(--spacing-md) + 6px);
+}
+
+/* Left border indicator for active link */
+.sidebar nav ul li a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: var(--spacing-md);
+  background: #e74c3c;
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: 220px;
+  padding: var(--spacing-xl);
+  flex-grow: 1;
+}
+
+.content-section {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+.content-section h1 {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+}
+
+/* ===== PROFILE ===== */
+.profile-box p {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+/* ===== SCHEDULE TABLE ===== */
+.schedule-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-box th,
+.schedule-box td {
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.schedule-box th {
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
+/* ===== ATTENDANCE FORM ===== */
+#attendanceForm {
+  max-width: 400px;
+}
+
+#attendanceForm label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+#attendanceForm input[type="time"] {
+  width: 100%;
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+}
+
+#attendanceForm button {
+  width: 100%;
+  padding: var(--spacing-md);
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+#attendanceForm button:hover {
+  background: var(--primary-dark);
+}
+
+.day-display {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background: #eaf2fd;
+  border-left: 5px solid var(--primary-color);
+  font-weight: 600;
+}
+
+/* ===== UTILITY ===== */
+.hidden {
+  display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+
+

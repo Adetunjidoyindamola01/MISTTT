@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="student-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Student Dashboard</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="active" data-target="student-profile"
+                >👤 My Profile</a
+              >
+            </li>
+            <li>
+              <a href="#" data-target="student-schedule">📅 My Schedule</a>
+            </li>
+            <li>
+              <a href="#" data-target="student-attendance"
+                >📝 Mark Attendance</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Logout button -->
+        <div class="logout-container">
+          <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Profile Section -->
+        <section id="student-profile" class="content-section">
+          <h1>My Profile</h1>
+          <div class="profile-box">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Matric Number:</strong> STU12345</p>
+            <p><strong>Department:</strong> Computer Science</p>
+            <p><strong>Start Date:</strong> July 1, 2025</p>
+            <p><strong>End Date:</strong> December 31, 2025</p>
+            <p><strong>Time Spent:</strong> 2 months</p>
+            <p><strong>Time Remaining:</strong> 3 months</p>
+          </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="student-schedule" class="content-section hidden">
+          <h1>My Schedule</h1>
+          <div class="schedule-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td>✔ Scheduled</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>❌ Not Scheduled</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>✔ Scheduled</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>✔ Scheduled</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>❌ Not Scheduled</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="student-attendance" class="content-section hidden">
+          <h1>Mark Attendance</h1>
+          <form id="attendanceForm">
+            <div class="day-display">Today: <strong>Monday</strong></div>
+            <label for="timeIn">Time In:</label>
+            <input type="time" id="timeIn" name="timeIn" required />
+
+            <label for="timeOut">Time Out:</label>
+            <input type="time" id="timeOut" name="timeOut" required />
+
+            <button type="submit">Submit Attendance</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <!-- Link JS -->
+    <script src="student-dashboard.js"></script>
+  </body>
+</html>

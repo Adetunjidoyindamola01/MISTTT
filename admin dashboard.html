@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="admin-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="active" data-target="admin-scheduler"
+                >📅 Student Scheduler</a
+              >
+            </li>
+            <li>
+              <a href="#" data-target="admin-attendance"
+                >📝 Attendance Records</a
+              >
+            </li>
+            <li>
+              <a href="#" data-target="admin-profiles">👥 Student Profiles</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Logout button -->
+        <div class="logout-container">
+          <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Scheduler Section -->
+        <section id="admin-scheduler" class="content-section">
+          <h1>Student Scheduler</h1>
+          <form id="schedulerForm">
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Number of Students</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td><input type="number" min="0" max="50" value="10" /></td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td><input type="number" min="0" max="50" value="12" /></td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td><input type="number" min="0" max="50" value="8" /></td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td><input type="number" min="0" max="50" value="15" /></td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td><input type="number" min="0" max="50" value="5" /></td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="submit">Save Schedule</button>
+          </form>
+        </section>
+
+        <!-- Attendance Records Section -->
+        <section id="admin-attendance" class="content-section hidden">
+          <h1>Attendance Records</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Date</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>2025-09-15</td>
+                <td>09:00</td>
+                <td>16:00</td>
+                <td>Present</td>
+              </tr>
+              <tr>
+                <td>Jane Smith</td>
+                <td>2025-09-15</td>
+                <td>--</td>
+                <td>--</td>
+                <td>Absent</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Student Profiles Section -->
+        <section id="admin-profiles" class="content-section hidden">
+          <h1>Student Profiles</h1>
+          <div class="profile-list">
+            <div class="profile-card">
+              <h3>John Doe</h3>
+              <p><strong>Matric No:</strong> STU12345</p>
+              <p><strong>Department:</strong> Computer Science</p>
+              <p><strong>Start Date:</strong> July 1, 2025</p>
+              <p><strong>End Date:</strong> Dec 31, 2025</p>
+              <p><strong>Time Spent:</strong> 2 months</p>
+              <p><strong>Time Remaining:</strong> 3 months</p>
+            </div>
+
+            <div class="profile-card">
+              <h3>Jane Smith</h3>
+              <p><strong>Matric No:</strong> STU67890</p>
+              <p><strong>Department:</strong> Information Tech</p>
+              <p><strong>Start Date:</strong> Aug 1, 2025</p>
+              <p><strong>End Date:</strong> Jan 31, 2026</p>
+              <p><strong>Time Spent:</strong> 1 month</p>
+              <p><strong>Time Remaining:</strong> 5 months</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Link JS -->
+    <script src="admin-dashboard.js"></script>
+  </body>
+</html>

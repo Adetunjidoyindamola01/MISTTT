@@ -1,0 +1,111 @@
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom right, #4a6fc7, #6a11cb);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  text-align: center;
+}
+
+.logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* ===== Login Box ===== */
+.login-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.tabs button.active {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+}
+
+.form {
+  display: none;
+  text-align: left;
+}
+
+.form.active {
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: white;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.options {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.switch {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: white;
+}
+
+.switch a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
